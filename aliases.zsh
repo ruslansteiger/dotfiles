@@ -13,7 +13,6 @@ function pf() {
 }
 
 ### Make ls great again
-# colorize the output
-alias ls='ls --color'
-# show hidden files + long listing format + file size in MB
-alias ll='ls -alh'
+alias ls='exa --all'
+alias ll='exa --all --long --header --time-style=long-iso --group-directories-first'
+
