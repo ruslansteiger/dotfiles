@@ -14,5 +14,5 @@ function pf() {
 
 ### Make ls great again
 alias ls='exa --all'
-alias ll='exa --all --long --header --time-style=long-iso --group-directories-first'
+alias ll='exa --all --git --long --header --time-style=long-iso --group-directories-first'
 
