@@ -3,3 +3,6 @@
 
 # PHP CS Fixer cache file
 .php-cs-fixer.cache
+
+# MacOS generated file
+.DS_Store
