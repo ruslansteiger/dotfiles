@@ -5,6 +5,7 @@ alias nah='git reset --hard;git clean -df'
 alias wip='git add . && git commit -m wip'
 
 ### Laravel
+alias c='composer'
 alias a='php artisan'
 alias mfs='php artisan migrate:fresh --seed'
 alias p='php artisan test'
