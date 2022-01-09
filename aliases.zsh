@@ -12,6 +12,7 @@ alias p='php artisan test'
 function pf() {
   php artisan test --filter "$*"
 }
+alias tinker='artisan tinker'
 
 ### Make ls great again
 alias ls='exa --all'
