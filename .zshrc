@@ -28,7 +28,6 @@ ZSH_CUSTOM=$DOTFILES
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     artisan
-    git
 )
 
 source $ZSH/oh-my-zsh.sh
