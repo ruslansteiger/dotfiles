@@ -1,2 +1,6 @@
 # ZSH custom plugins
 /plugins
+
+# Raycasts scripts
+/raycasts/node_modules
+/raycasts/package-lock.json
