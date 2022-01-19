@@ -13,6 +13,20 @@ echo 'Installing zsh plugins'
 echo '------------'
 git clone git@github.com:jessarcher/zsh-artisan.git ~/.dotfiles/plugins/artisan
 
+echo 'Git setup'
+echo '------------'
+# Set user name
+git config --global user.name "Ruslan Steiger"
+
+# Set vim as default editor
+git config --global core.editor "vim"
+
+# Add global gitignore
+git config --global core.excludesfile ~/.dotfiles/.gitignore_global
+
+# Register git hooks
+git config --global core.hooksPath ~/.dotfiles/git-hooks
+
 #https://github.com/driesvints/dotfiles/blob/main/fresh.sh
 
 #https://github.com/okaufmann/dotfiles/blob/master/bootstrap

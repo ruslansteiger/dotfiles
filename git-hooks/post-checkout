@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+# Source: https://git-scm.com/docs/githooks#_post_checkout
+
+### Guess email address
+green="\033[32m"
+default='\033[0m'
+
+remote=`git remote -v | awk '/\(push\)$/ {print $2}'`
+echo -e "Guessing email based on git repo: ${green}$remote${default}"
+email=steiger.ruslan@gmail.com # default
+
+if [[ $remote == *github.com:teamnovu* ]]; then
+    email=ruslan.steiger@novu.ch
+fi
+
+if [[ $remote == *whatwedo.ch* ]]; then
+    email=ruslan.steiger@wksbern.ch
+fi
+
+echo -e "Configuring user.email as: ${green}$email${default}"
+git config user.email $email
