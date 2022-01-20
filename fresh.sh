@@ -7,11 +7,11 @@ if test ! $(which omz); then
   echo 'Installing Oh My Zsh'
   echo '------------'
   /bin/sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/HEAD/tools/install.sh)"
-fi
 
-echo 'Installing zsh plugins'
-echo '------------'
-git clone git@github.com:jessarcher/zsh-artisan.git ~/.dotfiles/plugins/artisan
+  echo 'Installing zsh plugins'
+  echo '------------'
+  git clone git@github.com:jessarcher/zsh-artisan.git ~/.dotfiles/plugins/artisan
+fi
 
 echo 'Git setup'
 echo '------------'
