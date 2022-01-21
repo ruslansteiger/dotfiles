@@ -21,6 +21,9 @@ git config --global user.name "Ruslan Steiger"
 # Set vim as default editor
 git config --global core.editor "vim"
 
+# Deactivate rebase on pull
+git config --global pull.rebase false
+
 # Add global gitignore
 git config --global core.excludesfile ~/.dotfiles/.gitignore_global
 
