@@ -13,6 +13,41 @@ if test ! $(which omz); then
   git clone git@github.com:jessarcher/zsh-artisan.git ~/.dotfiles/plugins/artisan
 fi
 
+# Check for Homebrew and install if we don't have it
+if test ! $(which brew); then
+  echo 'Installing Homebrew'
+  echo '------------'
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+
+# Removes .zshrc from $HOME (if it exists) and symlinks the .zshrc file from the .dotfiles
+rm -rf $HOME/.zshrc
+ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
+
+# Removes .vimrc from $HOME (if it exists) and symlinks the .vimrc file from the .dotfiles
+rm -rf $HOME/.vimrc
+ln -s $HOME/.dotfiles/.vimrc $HOME/.vimrc
+
+# Update Homebrew recipes
+brew update
+
+# Install all our dependencies with bundle (See Brewfile)
+brew bundle --file $DOTFILES/Brewfile
+
+# Install PHP extensions with PECL
+pecl install redis
+
+# Install global Composer packages
+/usr/local/bin/composer global require laravel/installer laravel/valet
+
+# Install Laravel Valet
+$HOME/.composer/vendor/bin/valet install
+
+# Node Version Manager
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
 echo 'Git setup'
 echo '------------'
 # Set user name
@@ -30,7 +65,4 @@ git config --global core.excludesfile ~/.dotfiles/.gitignore_global
 # Register git hooks
 git config --global core.hooksPath ~/.dotfiles/git-hooks
 
-#https://github.com/driesvints/dotfiles/blob/main/fresh.sh
-
-#https://github.com/okaufmann/dotfiles/blob/master/bootstrap
-#https://github.com/okaufmann/dotfiles/blob/master/installscript
+echo '☑️ Setting up your Mac done.'
