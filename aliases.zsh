@@ -19,3 +19,6 @@ alias tinker='php artisan tinker'
 ### Make ls great again
 alias ls='exa --all'
 alias ll='exa --all --git --grid --long --time-style=long-iso --group-directories-first'
+
+### SSH
+alias copyssh='pbcopy < $HOME/.ssh/id_ed25519.pub'
