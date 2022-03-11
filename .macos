@@ -7,10 +7,10 @@
 ###############################################################################
 
 # Set computer name (as done via System Preferences → Sharing)
-sudo scutil --set ComputerName "MacBook-Ruslan"
-sudo scutil --set HostName "MacBook-Ruslan"
-sudo scutil --set LocalHostName "MacBook-Ruslan"
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "MacBook-Ruslan"
+sudo scutil --set ComputerName "MBP-Ruslan"
+sudo scutil --set HostName "MBP-Ruslan"
+sudo scutil --set LocalHostName "MBP-Ruslan"
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "MBP-Ruslan"
 
 ###############################################################################
 # Finder                                                                      #
