@@ -60,4 +60,7 @@ git config --global core.excludesfile ~/.dotfiles/.gitignore_global
 # Register git hooks
 git config --global core.hooksPath ~/.dotfiles/git-hooks
 
+# Set macOS preferences
+source $DOTFILES/.macos
+
 echo '☑️ Setting up your Mac done.'
