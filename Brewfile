@@ -10,6 +10,7 @@ brew 'nvm'
 brew 'php'
 brew 'redis'
 brew 'yarn'
+brew 'bat'
 
 # Apps
 cask '1password'

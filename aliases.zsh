@@ -16,6 +16,9 @@ function pf() {
 }
 alias tinker='php artisan tinker'
 
+### Cat with syntax highlighting
+alias cat=bat
+
 ### Make ls great again
 alias ls='exa --all'
 alias ll='exa --all --git --grid --long --time-style=long-iso --group-directories-first'
