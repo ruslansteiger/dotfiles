@@ -16,6 +16,9 @@ function pf() {
 }
 alias tinker='php artisan tinker'
 
+### Laravel Sail
+alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
+
 ### Cat with syntax highlighting
 alias cat=bat
 
