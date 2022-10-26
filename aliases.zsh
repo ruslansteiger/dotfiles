@@ -28,3 +28,6 @@ alias ll='exa --all --git --grid --long --time-style=long-iso --group-directorie
 
 ### SSH
 alias copyssh='pbcopy < $HOME/.ssh/id_ed25519.pub'
+
+### Deployer
+alias dep='vendor/bin/dep'
