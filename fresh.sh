@@ -1,5 +1,7 @@
 #!/bin/sh
 
+# TODO: Auto install IBM Plex Mono font
+
 echo "Setting up your Mac..."
 
 # Check for Oh My Zsh and install if we don't have it
@@ -7,10 +9,6 @@ if test ! $(which omz); then
   echo 'Installing Oh My Zsh'
   echo '------------'
   /bin/sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/HEAD/tools/install.sh)"
-
-  echo 'Installing zsh plugins'
-  echo '------------'
-  git clone git@github.com:jessarcher/zsh-artisan.git ~/.dotfiles/plugins/artisan
 fi
 
 # Check for Homebrew and install if we don't have it
@@ -34,11 +32,11 @@ brew update
 # Install all our dependencies with bundle (See Brewfile)
 brew bundle --file $DOTFILES/Brewfile
 
-# Install PHP extensions with PECL
-pecl install redis
+# Install PHP extensions with PECL without prompt
+printf "\n" | pecl install apc
 
 # Install global Composer packages
-/usr/local/bin/composer global require laravel/installer laravel/valet
+composer global require laravel/installer laravel/valet
 
 # Install Laravel Valet
 $HOME/.composer/vendor/bin/valet install

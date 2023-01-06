@@ -1,33 +1,29 @@
 ## https://formulae.brew.sh
 
 # Development
-brew 'composer'
 brew 'exa'
-brew 'mutagen-io/mutagen/mutagen'
-brew 'mysql'
+brew 'bat'
+brew 'php'
+brew 'composer'
 brew 'node'
 brew 'nvm'
-brew 'php'
-brew 'redis'
 brew 'yarn'
-brew 'bat'
+brew 'redis'
+brew 'mysql'
+brew 'postgresql@15'
 
 # Apps
 cask '1password'
-cask 'discord'
-cask 'docker'
-cask 'google-chrome'
-cask 'iina'
 cask 'keepassxc'
-cask 'phpstorm'
-cask 'ray'
+cask 'warp'
 cask 'raycast'
-cask 'rectangle'
-cask 'slack'
-cask 'tableplus'
+cask 'google-chrome'
+cask 'discord'
 cask 'telegram-desktop'
+cask 'iina'
+cask 'ray'
 cask 'tinkerwell'
+cask 'jetbrains-toolbox'
+cask 'docker'
 cask 'zoom'
-
-# Missing
-# warp Terminal https://warp.dev
+cask 'microsoft-teams'
