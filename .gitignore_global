@@ -1,8 +1,19 @@
+# MacOS generated file
+.DS_Store
+
+# Environment variables file
+.env
+
 # JetBrains project configuration file
 .idea
 
 # PHP CS Fixer cache file
 .php-cs-fixer.cache
 
-# MacOS generated file
-.DS_Store
+# PHP Unit result cache file
+.phpunit.result.cache
+
+# PhpStorm IDE-Helper files
+.phpstorm.meta.php
+_ide_helper.php
+_ide_helper_models.php
