@@ -48,5 +48,8 @@ export NVM_DIR="$HOME/.nvm"
 # https://github.com/sharkdp/bat#highlighting-theme
 export BAT_THEME="ansi"
 
+# Add postgres binaries to the path
+export PATH="/opt//homebrew/Cellar/postgresql@15/15.1_1/bin:$PATH"
+
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
