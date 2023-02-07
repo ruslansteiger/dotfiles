@@ -55,6 +55,9 @@ git config --global pull.rebase true
 # Create a new upstream branch for your local branch automatically if it doesn't exist yet
 git config --global push.autoSetupRemote true
 
+# Reuse recorded resolution on rebase
+git config --global rerere.enabled true
+
 # Add global gitignore
 git config --global core.excludesfile ~/.dotfiles/.gitignore_global
 
