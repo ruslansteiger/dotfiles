@@ -4,6 +4,9 @@ alias nah='git reset --hard;git clean -df'
 # wip
 alias wip='git add . && git commit -m wip'
 
+### Makefile
+alias m=make
+
 ### Composer
 alias c='composer'
 
@@ -28,6 +31,3 @@ alias ll='exa --all --git --grid --long --time-style=long-iso --group-directorie
 
 ### SSH
 alias copyssh='pbcopy < $HOME/.ssh/id_ed25519.pub'
-
-### Deployer
-alias dep='vendor/bin/dep'
