@@ -1,8 +1,8 @@
 ### Git
+# wip 😎
+alias wip='git add . && git commit -m wip'
 # Reset to last commit and delete any new files
 alias nah='git reset --hard;git clean -df'
-# wip
-alias wip='git add . && git commit -m wip'
 
 ### Makefile
 alias m=make
@@ -13,11 +13,17 @@ alias c='composer'
 ### Laravel
 alias a='php artisan'
 alias mfs='php artisan migrate:fresh --seed'
-alias p='php artisan test'
-function pf() {
-  php artisan test --filter "$*"
-}
 alias tinker='php artisan tinker'
+
+### Testing
+alias p='[ -f artisan ] && php artisan test || vendor/bin/pest'
+function pf() {
+  if [ -f artisan ]; then
+    php artisan test --filter "$*"
+  else
+    vendor/bin/pest --filter "$*"
+  fi
+}
 
 ### Laravel Sail
 alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
