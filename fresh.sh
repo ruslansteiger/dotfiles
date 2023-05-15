@@ -41,6 +41,9 @@ composer global require laravel/installer laravel/valet
 # Install Laravel Valet
 $HOME/.composer/vendor/bin/valet install
 
+# Install Node Version Manager
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+
 echo 'Git setup'
 echo '------------'
 # Set user name
