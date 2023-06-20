@@ -10,8 +10,8 @@ remote=`git remote -v | awk '/\(push\)$/ {print $2}'`
 echo -e "Guessing email based on git repo: ${green}$remote${default}"
 email=steiger.ruslan@gmail.com # default
 
-if [[ $remote == *github.com:teamnovu* ]]; then
-    email=ruslan.steiger@novu.ch
+if [[ $remote == *wksbern.ch* ]]; then
+    email=ruslan.steiger@wksbern.ch
 fi
 
 if [[ $remote == *whatwedo.ch* ]]; then
