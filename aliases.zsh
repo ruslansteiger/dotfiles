@@ -37,3 +37,7 @@ alias ll='exa --all --git --grid --long --time-style=long-iso --group-directorie
 
 ### SSH
 alias sshcopy='pbcopy < $HOME/.ssh/id_ed25519.pub'
+
+### NPM
+alias dev='npm run dev'
+alias build='npm run build'
