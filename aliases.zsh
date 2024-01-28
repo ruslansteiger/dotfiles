@@ -7,8 +7,9 @@ alias nah='git reset --hard;git clean -df'
 ### Makefile
 alias m=make
 
-### Composer
-alias c='composer'
+### PHP
+alias php='herd php'
+alias c='herd composer'
 
 ### Laravel
 alias a='php artisan'
