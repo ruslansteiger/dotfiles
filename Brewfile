@@ -1,7 +1,6 @@
 ## https://formulae.brew.sh
 
 # Development
-brew 'exa'
 brew 'bat'
 brew 'php'
 brew 'composer'

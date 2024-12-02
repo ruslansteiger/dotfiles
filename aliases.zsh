@@ -32,10 +32,6 @@ alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
 ### Cat with syntax highlighting
 alias cat=bat
 
-### Make ls great again
-alias ls='exa --all'
-alias ll='exa --all --git --grid --long --time-style=long-iso --group-directories-first'
-
 ### SSH
 alias sshcopy='pbcopy < $HOME/.ssh/id_ed25519.pub'
 
